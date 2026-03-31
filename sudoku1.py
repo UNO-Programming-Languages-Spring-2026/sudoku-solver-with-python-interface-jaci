@@ -14,7 +14,11 @@ class SudokuApp(Application):
             control.load(file)
 
         control.ground([("base", [])])
-        control.solve()
+        control.solve(on_model=self.print_model)
+
+    def print_model(self, model):
+        atoms = sorted(str(symbol) for symbol in model.symbols(shown=True))
+        print(" ".join(atoms))
 
 
 app = SudokuApp()
