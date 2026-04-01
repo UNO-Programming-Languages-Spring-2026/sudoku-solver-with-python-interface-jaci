@@ -33,4 +33,4 @@ class SudokuApp(Application):
 if __name__ == "__main__":
     # Strip the leading '0' argument the assignment passes before the file
     args = [a for a in sys.argv[1:] if a != "0"]
-    clingo_main(SudokuApp(), args)
+    clingo_main(SudokuApp(), args) 
